@@ -7,7 +7,7 @@ Read documentation here: [https://pondwadermc.gitbook.io/cubed-api/](https://pon
 To install Cubed-API run `npm i cubed-api`
 
 # Example Code
-`// Dependencies
+```// Dependencies
 const CubedCraft = require('cubed-api');
 
 // Account Details
@@ -22,6 +22,6 @@ CubedCraft.login(username, password).then(ses => {
         console.log(servers);
     })
     
-});`
+});```
 
 ![CubedCraft-Logo](https://cubedcraft.com/uploads/server-icon.png)
