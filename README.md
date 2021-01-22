@@ -1,6 +1,8 @@
 # Cubed-API
 A API wrapper for CubedCraft and Player Servers
 
+By using this library you agree to the terms of use: https://pastebin.com/raw/tB2nMNY9
+
 Read documentation here: [https://pondwadermc.gitbook.io/cubed-api/](https://pondwadermc.gitbook.io/cubed-api/)
 
 # Installing
