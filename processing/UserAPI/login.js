@@ -32,7 +32,7 @@ module.exports = (username, password) => {
                 //if (txt === `<br />
                 //<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />
                 //<script data-cfasync="false">window.location.replace("/dashboard/");</script>`) {
-                    session(PHPSESSID);
+                session(PHPSESSID);
                 //}
                 //else {
                 //    error('Invalid login credentials were provided');

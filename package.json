@@ -12,5 +12,18 @@
     "cheerio": "^1.0.0-rc.5",
     "node-fetch": "^2.6.1",
     "url": "^0.11.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PondWader/Cubed-API.git"
+  },
+  "keywords": [
+    "Cubed-API",
+    "CubedCraft"
+  ],
+  "bugs": {
+    "url": "https://github.com/PondWader/Cubed-API/issues"
+  },
+  "homepage": "https://github.com/PondWader/Cubed-API#readme"
 }
