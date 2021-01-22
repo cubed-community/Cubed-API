@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 
 test.js
+node_modules
