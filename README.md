@@ -22,6 +22,7 @@ CubedCraft.login(username, password).then(ses => {
         console.log(servers);
     })
     
-});```
+});
+```
 
 ![CubedCraft-Logo](https://cubedcraft.com/uploads/server-icon.png)
