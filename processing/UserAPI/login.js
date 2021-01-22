@@ -27,16 +27,16 @@ module.exports = (username, password) => {
                 headers: { cookie: `PHPSESSID=${PHPSESSID};` },
                 body: params
             }).then(async (res) => {
-                const txt = await res.text();
-                console.log(txt);
-                if (txt === `<br />
-                <b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />
-                <script data-cfasync="false">window.location.replace("/dashboard/");</script>`) {
+                //const txt = await res.text();
+                
+                //if (txt === `<br />
+                //<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />
+                //<script data-cfasync="false">window.location.replace("/dashboard/");</script>`) {
                     session(PHPSESSID);
-                }
-                else {
-                    error('Invalid login credentials were provided');
-                }
+                //}
+                //else {
+                //    error('Invalid login credentials were provided');
+                //}
                 
             })
         })
