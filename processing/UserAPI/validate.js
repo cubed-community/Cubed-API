@@ -2,14 +2,11 @@ const { URLSearchParams } = require("url");
 const fetch = require('node-fetch');
 const cheerio = require("cheerio");
 
-module.exports = (username, password) => {
+module.exports = (SessionID, username, password) => {
 
     return new Promise((session, error) => {
 
-        fetch('https://playerservers.com/login').then(async res => {
-
-            const cookies = await res.headers.get('set-cookie');
-            const PHPSESSID = await cookies.split('PHPSESSID=')[1].split(';')[0];
+        fetch('https://playerservers.com/login', {headers: {cookie: `PHPSESSID=${SessionID};`}}).then(async res => {
 
             const html = await res.text();
 
@@ -24,15 +21,15 @@ module.exports = (username, password) => {
 
             fetch("https://playerservers.com/login", {
                 method: "POST",
-                headers: { cookie: `PHPSESSID=${PHPSESSID};` },
+                headers: { cookie: `PHPSESSID=${SessionID};` },
                 body: params
             }).then(async (res) => {
                 const txt = await res.text();
                 if (txt === `<br />\n<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />\n<script data-cfasync="false">window.location.replace("/dashboard/");</script>` || txt === `<br />\n<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />\n<script data-cfasync="false">window.location.replace("/");</script>` || txt === `<script data-cfasync="false">window.location.replace("/");</script>` || txt === `<script data-cfasync="false">window.location.replace("/dashboard");</script>`) {
-                    session(PHPSESSID);
+                    session(SessionID);
                 }
                 else {
-                    error('Invalid login credentials were provided');
+                    error('Invalid login credentials or session ID was provided');
                 }
                 
             })
