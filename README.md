@@ -1,5 +1,5 @@
 # Cubed-API
-A API wrapper for CubedCraft and Player Servers
+A user API wrapper for CubedCraft and Player Servers, allows you to easily perform functions as if your a logged in user
 
 By using this library you agree to the terms of use: https://pastebin.com/raw/tB2nMNY9
 

@@ -1,7 +1,7 @@
 {
   "name": "cubed-api",
-  "version": "0.1.1",
-  "description": "A API wrapper for CubedCraft and Player Servers",
+  "version": "0.1.3",
+  "description": "A user API wrapper for CubedCraft and Player Servers, allows you to easily perform functions as if your a logged in user",
   "main": "index.js",
   "scripts": {
     "start": "node ."
