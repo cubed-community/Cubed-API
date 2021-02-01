@@ -3,11 +3,8 @@ const fetch = require('node-fetch');
 const cheerio = require("cheerio");
 
 module.exports = (SessionID, username, password) => {
-
     return new Promise((session, error) => {
-
         fetch('https://playerservers.com/login', {headers: {cookie: `PHPSESSID=${SessionID};`}}).then(async res => {
-
             const html = await res.text();
 
             const $ = cheerio.load(html);
@@ -31,7 +28,6 @@ module.exports = (SessionID, username, password) => {
                 else {
                     error('Invalid login credentials or session ID was provided');
                 }
-                
             })
         })
     })
