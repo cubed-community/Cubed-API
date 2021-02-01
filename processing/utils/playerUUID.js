@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 module.exports = (playerName) => {
     return new Promise ((UUID, error) => {
         fetch(`https://api.mojang.com/users/profiles/minecraft/${playerName}`).then(async res => {
-            if (!(res.status === 200)) {
+            if (res.status !== 200) {
                 return error('There is no user with that username!')
             }
             const json = await res.json();
