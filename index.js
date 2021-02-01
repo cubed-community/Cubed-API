@@ -1,4 +1,4 @@
-// UserAPIE
+// UserAPI
 
 const login = require('./processing/UserAPI/login.js');
 const selectServer = require('./processing/UserAPI/selectServer.js');
@@ -64,6 +64,4 @@ module.exports = {
             playerUUID: playerUUID,
             orderServers: orderServers
         }
-
-
 }
