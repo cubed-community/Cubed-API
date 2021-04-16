@@ -27,7 +27,7 @@ module.exports = (username, password) => {
                 body: params
             }).then(async (res) => {
                 const txt = await res.text();
-                if (txt === `<br />\n<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />\n<script data-cfasync="false">window.location.replace("/dashboard/");</script>` || txt === `<br />\n<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />\n<script data-cfasync="false">window.location.replace("/");</script>` || txt === `<script data-cfasync="false">window.location.replace("/");</script>` || txt === `<script data-cfasync="false">window.location.replace("/dashboard");</script>`) {
+                if (txt === `<br />\n<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />\n<script data-cfasync="false">window.location.replace("/dashboard/");</script>` || txt === `<br />\n<b>Notice</b>:  Undefined property: stdClass::$pass_method in <b>/var/www/html/core/classes/User.php</b> on line <b>212</b><br />\n<script data-cfasync="false">window.location.replace("/");</script>` || txt === `<script data-cfasync="false">window.location.replace("/");</script>` || txt === `<script data-cfasync="false">window.location.replace("/dashboard");</script>` || txt === `<script data-cfasync="false">window.location.replace("/dashboard/");</script>`) {
                     session(PHPSESSID);
                 }
                 else {
