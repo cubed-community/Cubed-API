@@ -5,6 +5,8 @@ By using this library you agree to the terms of use: https://pastebin.com/raw/tB
 
 Read documentation here: [https://pondwadermc.gitbook.io/cubed-api/](https://pondwadermc.gitbook.io/cubed-api/)
 
+[![npm](https://img.shields.io/npm/dt/cubed-api.svg?style=for-the-badge)](https://npmjs.com/package/cubed-api)
+
 # Installing
 To install Cubed-API run `npm i cubed-api`
 
@@ -25,6 +27,14 @@ CubedCraft.login(username, password).then(ses => {
     })
     
 });
+```
+
+```
+const CubedCraft = require('cubed-api');
+
+CubedCraft.console.onMessage('SessionID', m => {
+    console.log(m);
+})
 ```
 
 ![CubedCraft-Logo](https://cubedcraft.com/uploads/server-icon.png)

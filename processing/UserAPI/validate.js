@@ -1,4 +1,3 @@
-const { URLSearchParams } = require("url");
 const fetch = require('node-fetch');
 const cheerio = require("cheerio");
 
