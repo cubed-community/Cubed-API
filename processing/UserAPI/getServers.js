@@ -53,17 +53,17 @@ module.exports = (SessionID) => {
 function parseServers(servers) {
     var result = [];
     servers.forEach(server => {
+        console.log(server);
         const serverObject = new Object();
         serverObject.name = server[1];
         serverObject.plan = server[2].split('<a')[0].replace(' ', '');
-        serverObject.boosters = server[3];
-        serverObject.lastOnline = server[4];
-        serverObject.code = server[5].split('https://playerservers.com/dashboard/?s=')[1].split('"')[0];
-        serverObject.owner = server[6]
+        serverObject.boosters = server[3].split(' ').join('');
+        serverObject.lastOnline = server[5];
+        serverObject.code = server[6].split('https://playerservers.com/dashboard/?s=')[1].split('"')[0];
+        serverObject.node = server[4]
 
         result.push(serverObject);
     })
 
     return result;
-
 }
