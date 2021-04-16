@@ -53,7 +53,6 @@ module.exports = (SessionID) => {
 function parseServers(servers) {
     var result = [];
     servers.forEach(server => {
-        console.log(server);
         const serverObject = new Object();
         serverObject.name = server[1];
         serverObject.plan = server[2].split('<a')[0].replace(' ', '');

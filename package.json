@@ -1,6 +1,6 @@
 {
   "name": "cubed-api",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "A user API wrapper for CubedCraft and Player Servers, allows you to easily perform functions as if your a logged in user",
   "main": "index.js",
   "scripts": {
