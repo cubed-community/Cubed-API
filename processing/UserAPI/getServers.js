@@ -58,7 +58,7 @@ function parseServers(servers) {
         serverObject.plan = server[2].split('<a')[0].replace(' ', '');
         serverObject.boosters = server[3].split(' ').join('');
         serverObject.lastOnline = server[5];
-        serverObject.code = server[6].split('https://playerservers.com/dashboard/?s=')[1].split('"')[0];
+        serverObject.code = parseInt(server[6].split('https://playerservers.com/dashboard/?s=')[1].split('"')[0]);
         serverObject.node = server[4]
 
         result.push(serverObject);
