@@ -15,14 +15,14 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PondWader/Cubed-API.git"
+    "url": "git+https://github.com/cubed-community/Cubed-API.git"
   },
   "keywords": [
     "Cubed-API",
     "CubedCraft"
   ],
   "bugs": {
-    "url": "https://github.com/PondWader/Cubed-API/issues"
+    "url": "https://github.com/cubed-community/Cubed-API/issues"
   },
-  "homepage": "https://github.com/PondWader/Cubed-API#readme"
+  "homepage": "https://github.com/cubed-community/Cubed-API#readme"
 }
